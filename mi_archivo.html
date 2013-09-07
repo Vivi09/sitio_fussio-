@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<style type="text/css">
+.cc{width:200px; height:90px; margin:12px; float:left; cursor:pointer}
+.hasMiClase{background:tan}
+.hasOtroClase{background:deeppink!important; border: solid 3px red}
+</style>
+</head>
+<body>
+
+
+
+<div class="hasMiClase cc" > </div>
+<div class="hasMiClase cc" > </div>
+<div class="hasMiClase cc" > </div>
+<div class="hasMiClase cc" > </div>
+<div class="hasMiClase cc" > </div>
+<div class="hasMiClase cc" > </div>
+<div class="hasMiClase cc" > </div>
+
+
+<script type="text/javascript" >
+$.extend($.expr[":"], {
+tieneMiClase: function (element) {
+	return $(element).css("float") === "left";
+}
+});
+
+$("div:tieneMiClase").click(function() {
+	
+	$(this).addClass("hasOtroClase");
+});
+
+</script>
+
+</body>
+</html>
