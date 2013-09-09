@@ -17,11 +17,36 @@
   <button id="getw">dame la altura de la ventana</button>
  
   <div>&nbsp;</div>
+  <span> </span>
   <p>
     Sample paragraph to test height
   </p>
 <script>
+var windowWidth = $(window).width(); //retrieve current window width
+var windowHeight = $(window).height(); //retrieve current window height
+var documentWidth = $(document).width(); //retrieve current document width
+var documentHeight = $(document).height(); //retrieve current document height
+var vScrollPosition = $(document).scrollTop(); //retrieve the document scroll ToP position
+var hScrollPosition = $(document).scrollLeft(); //retrieve the document scroll Left position
+
+
+function onm_window_parameters(){ //called on viewer reload, screen resize or scroll
+
+    windowWidth = $(window).width(); //retrieve current window width
+    windowHeight = $(window).height(); //retrieve current window height
+    documentWidth = $(document).width(); //retrieve current document width
+    documentHeight = $(document).height(); //retrieve current document height
+    vScrollPosition = $(document).scrollTop(); //retrieve the document scroll ToP position
+    hScrollPosition = $(document).scrollLeft(); //retrieve the document scroll Left position
+	
+$("span").append( "la altura es: " + 'altu');
+}
+
     function showHeight(ele, h) {
+		
+		
+		$("span").append( "la altura es:" + 'altu');
+		
       $("div").text("The height for the " + ele +
                     " is " + h + "px.");
     }
@@ -34,6 +59,7 @@
     $("#getw").click(function () {
       showHeight("window", $(window).height());
     });
+	
  
 </script>
  
