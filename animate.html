@@ -47,8 +47,11 @@ $("#go").click( function(){
 		width:"30px",
 		height:"60px",
 		background:"goldenrod"
-	}, 1000).slideup(300, function(){
-	$(".peque").hide(100);	
+	}, 1000).animate({
+		left:"200px",
+		background:"red"
+		}, 200).slideUp(2000 , function(){
+	$(".peque").slideUp(100)
 	});
 	
 	$("#bloque3").delay(4000).animate({
