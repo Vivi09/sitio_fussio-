@@ -14,7 +14,7 @@ div {
   #block{left:50px;}
 #bloque2, #bloque3, #bloque4{ width:100px; height:200px;background:darksalmon;
 float:left;margin:8px;}
-.pequeP{background:chocolate;width:20px;height:40px;}
+.peque{background:chocolate;width:20px;height:40px;}
 </style>
 </head>
 
@@ -47,7 +47,9 @@ $("#go").click( function(){
 		width:"30px",
 		height:"60px",
 		background:"goldenrod"
-	}, 1000);
+	}, 1000).slideup(300, function(){
+	$(".peque").hide(100);	
+	});
 	
 	$("#bloque3").delay(4000).animate({
 		width:"30px",
