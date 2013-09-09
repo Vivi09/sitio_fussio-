@@ -1,37 +1,1 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>offset demo</title>
-  <style>
-p { margin-left:10px; color:blue; width:200px;
-    cursor:pointer; }
-span { color:red; cursor:pointer; }
-div.abs { width:50px; height:50px; position:absolute;
-          left:220px; top:35px; background-color:green;
-          cursor:pointer; }
-  	</style>
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-</head>
-<body>
-  <div id="result">Click sobre algun elemento para ver las cordenadas</div>
-<p>
- metodo para encontrar las <span>coordenadas</span> del offset (osea en el click me dara la posición).
-</p>
- <div style="margin-left: 300px">dime donde estoy</div>
- 
-<div class="abs">
-</div>
- 
-<script>
-$("*", document.body).click(function (e) {
-  var offset = $(this).offset();
-  e.stopPropagation();
-  $("#result").text(this.tagName + " coords ( " + offset.left + ", " +
-                                  offset.top + " )");
-});
- 
-</script>
- 
-</body>
-</html>
+<!doctype html><html lang="en"><head>  <meta charset="utf-8">  <title>offset demo</title>  <style>  body{background:tan;}p { margin-left:10px; color:blue; width:200px;    cursor:pointer; font-family:Arial; padding:12px; color: white; background:orangered; }span { color:#FC9; cursor:pointer; }div.abs { width:50px; height:50px; position:absolute;          left:220px; top:35px; background-color:green;          cursor:pointer; }  	</style>  <script src="http://code.jquery.com/jquery-1.9.1.js"></script></head><body>  <div id="result">Click sobre algun elemento para ver las cordenadas</div><p> metodo para encontrar las <span>coordenadas</span> del offset (osea en el click me dara la posición).</p> <div style="margin-left: 300px">dime donde estoy</div> <div class="abs"></div> <script>$("*", document.body).click(function (e) {  var offset = $(this).offset();  e.stopPropagation();  $("#result").text(this.tagName + " coords ( " + offset.left + ", " +                                  offset.top + " )");}); </script> </body></html>
