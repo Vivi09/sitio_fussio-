@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>bind demo</title>
+  <style>
+  p {
+    color: red;
+  }
+  span {
+    color: blue;
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+ 
+<p>Tiene un evento</p>
+<button>Click evento</button>
+<span style="display: none;"></span>
+ 
+<script>
+$( "p" ).bind( "myCustomEvent", function( e, miNombre, myValue ) {
+  $( this ).text( miNombre + ", Hola por ahí!" );
+  $( "span" )
+    .stop()
+    .css( "opacity", 1 )
+    .text( "miNombre = " + miNombre )
+    .fadeIn( 30 )
+    .fadeOut( 1000 );
+  });
+$( "button" ).click(function() {
+  $( "p" ).trigger( "myCustomEvent", [ "John" ] );
+});
+</script>
+ 
+</body>
+</html>
