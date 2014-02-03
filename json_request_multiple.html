@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<style type="text/css" media="all">
+.wrapper{border:solid 10px #466870;color: red;font-size: 0.8rem;
+background: #FBFCF0;padding: 30px;}
+.wrapper h2 {font-family: Arial; font-size: 2em; color:#C0CF9B;}
+</style>
+
+</head>
+
+<body>
+
+
+<script type="text/javascript">
+
+
+$(function() {
+var req = $.ajax({
+url: "http://api.dribbble.com/shots/",
+dataType: "jsonp"
+});
+
+
+req.done(function (data){
+	
+
+for(var i = 0; i < data.shots.length; i++)
+{
+    var shots = data.shots[i].title;
+   console.log(shots);
+
+var wrapperDiv = $("<div />", {"class": "wrapper"});
+var title = $("<h2 />", {text:shots});
+
+
+$("body").append(wrapperDiv);
+$(".wrapper").append(title); 
+
+}
+
+for(var i = 0; i < data.shots.length; i++)
+{
+    var shots = data.shots[i].image_teaser_url;
+   console.log(shots);
+
+
+var img = $("<img/>", {alt: data.title,
+						src: shots
+});
+$(".wrapper").append(img);
+
+}
+
+});
+
+
+
+/*
+req.done(function (data){
+	var wrapperDiv = $("<div />", {"class": "wrapper"
+});
+
+var title = $("<h2 />", {text:data.title});
+var img = $("<img/>", {alt: data.title,
+						src: data.image_url
+});
+var user = $("<a />", {
+	text: data.player.name,
+	href: data.player.url
+});
+
+var user = $("<img/>", {src: data.player.avatar_url 
+});
+
+wrapperDiv
+.append(title)
+.append(img)
+.append(user)
+
+$("body").append(wrapperDiv);
+
+});
+
+*/
+
+
+
+
+});
+
+
+</script>
+
+
+</body>
+</html>
