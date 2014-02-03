@@ -30,29 +30,17 @@ req.done(function (data){
 for(var i = 0; i < data.shots.length; i++)
 {
     var shots = data.shots[i].title;
-   console.log(shots);
-
-var wrapperDiv = $("<div />", {"class": "wrapper"});
-var title = $("<h2 />", {text:shots});
-
-
-$("body").append(wrapperDiv);
-$(".wrapper").append(title); 
-
-}
-
-for(var i = 0; i < data.shots.length; i++)
-{
-    var shots = data.shots[i].image_teaser_url;
-   console.log(shots);
-
-
-var img = $("<img/>", {alt: data.title,
-						src: shots
-});
-$(".wrapper").append(img);
+    var url_img = data.shots[i].image_teaser_url;console.log(shots);
+    var img = $("<img/>", {alt: data.title,src: url_img});
+    var wrapperDiv = $("<div />", {"class": "wrapper"});
+    var title = $("<h2 />", {text:shots});
+    
+    wrapperDiv.append(title,img);
+    $("body").append(wrapperDiv);
+ 
 
 }
+
 
 });
 
