@@ -3,8 +3,634 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Selectores y su explicación</title>
-
+<style type="text/css">
+h2{
+  color:tomato;
+}
+  code{
+    font-family: 'Courier';
+  }
+  p:lang(cod){
+    padding: 12px;
+    background: #efefef;
+  }
+</style>
 <h1>Pseudo Clases</h1>
+
+<h2>::after</h2>
+<span>Puede servir para colocar alguna marca o icono después de alguna etiqueta</span>
+<br>
+<p lang="cod">
+<code>
+  .external::after {<br>
+    content: url(external-link.png);
+    padding-left: 5px; <br>
+}
+</code>
+</p>
+
+<hr>
+
+<h2>::first-letter</h2>
+<span>Selecciona la primera letra</span>
+<br>
+<p lang="cod">
+<code>
+  p::first-letter {<br>
+    /* aquí hirían los estilos */<br>
+}
+</code>
+</p>
+
+<hr>
+
+<h2>::placeholder</h2>
+<span>Selecciona el texto del input que se pone como ejemplo de como se debe llenar el input</span>
+<br>
+<p lang="cod">
+<code>
+  <input type="text" placeholder="This is some placeholder text.."><br>
+  ::placeholder {<br>
+    color: #96eb7f;
+    font-family: Lato, sans-serif;<br>
+}
+</code>
+</p>
+
+<hr>
+
+
+<h2>::before</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>::first-line</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>::election</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+
+<h2>:active</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:checked</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:dir()</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:empty</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:first</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:first-of-type</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:fullscreen</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:in-range</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:invalid</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:last-child</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:left</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:not()</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:nth-last-child()</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:nth-of-type()</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:only-of-type</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:out-of-range</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:read-write</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:right</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:scope</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:valid</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>content</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:blank</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:default</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:disabled</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:enabled</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:first-child</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:focus</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:hover</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:indeterminate</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:lang()</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:last-of-type</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:link</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:nth-child()</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:nth-last-of-type()</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:only-child</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:optional</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:read-only</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:required</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:root</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:target</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
+
+
+<h2>:visited</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+
+</code>
+</p>
+
+<hr>
 
 <style type="text/css">
 * {font-family: Arial;}
