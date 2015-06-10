@@ -105,12 +105,14 @@ h2{
 
 
 <h2>:active</h2>
-<span> </span>
+<span>Estiliza los elementos que estado de activo </span>
 <br>
 <p lang="cod">
 <code>
-  
-
+  a:active {<br>
+    background-color: black;<br>
+    color: white;<br>
+}
 </code>
 </p>
 
@@ -118,11 +120,14 @@ h2{
 
 
 <h2>:checked</h2>
-<span> </span>
+<span>Selecciona los inpu type checkbox ó radio botton que estén en estado de checados</span>
 <br>
 <p lang="cod">
 <code>
-  
+  input[type = "checkbox"]:checked + label {<br>
+    text-decoration: line-through;<br>
+    color: grey;<br>
+}
 
 </code>
 </p>
