@@ -1,0 +1,34 @@
+<script>
+	// obtener la fecha del día para colocarlo en el calendario
+	var d = new Date();
+		var semana = new Array(7);
+		semana[0] = "Domingo";
+		semana[1] = "Lunes";
+		semana[2] = "Martes";
+		semana[3] = "Miércoles";
+		semana[4] = "Jueves";
+		semana[5] = "Viernes";
+		semana[6] = "Sábado";
+
+		var mes = new Array(12);
+		mes[0] = "Enero";
+		mes[1] = "Febrero";
+		mes[2] = "Marzo";
+		mes[3] = "Abril";
+		mes[4] = "Mayo";
+		mes[5] = "Junio";
+		mes[6] = "Julio";
+		mes[7] = "Agosto";
+		mes[8] = "Setiembre";
+		mes[9] = "Octubre";
+		mes[10] = "Noviembre";
+		mes[11] = "Diciembre"; 
+
+		var dia = semana[d.getDay()];
+		var fecha = mes[d.getMonth()];
+		var diam = d.getDate();
+		var y = d.getFullYear();
+
+		jQuery(".view-calendario-de-eventos .date-heading h3").text(dia+' '+diam+' de '+fecha+', '+ y );
+
+</script>
