@@ -635,11 +635,77 @@ h2{
 <p lang="cod">
 <code>
   
-
 </code>
 </p>
-
 <hr>
+
+
+<h2>img[alt]</h2>
+<span> </span>
+<br>
+<p lang="cod">
+<code>
+  
+</code>
+</p>
+<hr>
+
+<h2>img[src="mifoto.gif"]</h2>
+<span>Selecciona el nombre de la foto </span>
+<br>
+<p lang="cod">
+<code>
+  
+</code>
+</p>
+<hr>
+
+<h2>img[src^="alerta"]</h2>
+<span>Selecciona las fotos que tienen la palabra 'Alerta' al inicio del nombre de la foto</span>
+<br>
+<p lang="cod">
+<code>
+  
+</code>
+</p>
+<hr>
+
+<h2>img[src$="gif"]</h2>
+<span>Selecciona las fotos que tienen la extensión 'gif'</span>
+<br>
+<p lang="cod">
+<code>
+  
+</code>
+</p>
+<hr>
+
+<h2>img[src*="ert"]</h2>
+<span>Selecciona las fotos que tienen las letras 'ert' en algún lugar del nombre, por ejemplo: 'alerta.jpg'</span>
+<br>
+<p lang="cod">
+<code>
+  
+</code>
+</p>
+<hr>
+
+<h2>
+article[class~="resaltado"]
+article[class~="archivo"]
+article[class~="ingles"]
+</h2>
+<span>El carácter ~ indica que estos selectores deben seleccionar un elemento <article> 
+cuyo valor de atributo class es una lista de valores separados por espacios en blanco, 
+pero sólo si uno de esos valores es igual al valor indicado dentro de las comillas.</span>
+<br>
+<p lang="cod">
+<code>
+  <article class="resaltado archivo ingles"></article>
+</code>
+</p>
+<hr>
+
 
 <style type="text/css">
 * {font-family: Arial;}
